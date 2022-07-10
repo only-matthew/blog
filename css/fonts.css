@@ -1,0 +1,14 @@
+@font-face {
+    font-family:'arzhu';
+    src:url('/fonts/pfsxt.woff2'); /* 修改成你的字体 */
+    font-display:swap
+}
+h1#site-title {
+    font-family:arzhu!important
+}
+span#subtitle {
+    font-family:arzhu!important
+}
+a#site-name {
+    font-family:arzhu!important
+}
