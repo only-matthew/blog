@@ -1,9 +1,20 @@
 @font-face {
     font-family:'arzhu';
-    src:url('/fonts/pfsxt.woff2'); /* 修改成你的字体 */
+    src:url('/fonts/FZQiGXKJW.woff2'); /* 修改成你的字体 */
     font-display:swap
 }
+@font-face {
+    font-family: firacode;
+    src: url('/fonts/firacodem.woff2');
+}
+@font-face {
+    font-family: fzfonts;
+    src: url('/fonts/FZQiGXKJW.woff2');
+}
 h1#site-title {
+    font-family:arzhu!important
+}
+h1.post-title {
     font-family:arzhu!important
 }
 span#subtitle {
@@ -11,4 +22,31 @@ span#subtitle {
 }
 a#site-name {
     font-family:arzhu!important
+}
+a.title {
+    font-family:fzfonts!important
+}
+div#post {
+    font-family:fzfonts!important;
+}
+div.item-headline {
+    font-family:fzfonts!important
+}
+div.author-info__name {
+    font-family:fzfonts!important
+}
+div.footer-wrap {
+    font-family:fzfonts!important
+}
+div#menus {
+    font-family:arzhu!important
+}
+div#page {
+    font-family:fzfonts!important
+}
+div.recent-post-item {
+    font-family:fzfonts!important
+}
+span.line {
+    font-family:firacode!important
 }
