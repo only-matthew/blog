@@ -47,6 +47,15 @@ div#page {
 div.recent-post-item {
     font-family:fzfonts!important
 }
+div.meta-firstline {
+    font-family:fzfonts!important
+}
+div.meta-secondline {
+    font-family:fzfonts!important
+}
+div#sidebar-menus {
+    font-family:fzfonts!important
+}
 span.line {
     font-family:firacode!important
 }
