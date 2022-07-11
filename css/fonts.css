@@ -24,37 +24,54 @@ a#site-name {
     font-family:arzhu!important
 }
 a.title {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div#post {
     font-family:fzfonts!important;
     font-size: 16px;
+    font-weight: bold;
 }
 div.item-headline {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.author-info__name {
-    font-family:fzfonts!important
+    font-family:arzhu!important;
+    font-size: 30px!important;
+    font-weight: bold!important;
 }
 div.footer-wrap {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div#menus {
-    font-family:arzhu!important;
-    font-size: 22px;
+    font-family:fzfonts!important;
+    font-size: 20px;
+    font-weight: bold;
 }
 div#page {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div#archive {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.recent-post-item {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.content {
     font-family:fzfonts!important;
     font-size: 16px;
+    font-weight: bold;
 }
 div.meta-firstline {
     font-family:arzhu!important
@@ -65,20 +82,24 @@ div.meta-secondline {
 div#sidebar-menus.open {
     font-family:arzhu!important;
     font-size: 16px;
+    font-weight: bold;
 }
 div#footer-wrap {
     font-family:arzhu!important;
     font-size: 16px;
+    font-weight: bold;
 }
 div#post-meta {
     font-family:arzhu!important;
-    font-size: 16px;
+    font-size: 20px;
 }
 div.pagination {
-    font-family:arzhu!important
+    font-family:arzhu!important;
 }
 div.card-widget.card-info {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.aside-list-item {
     font-family:fzfonts!important
@@ -86,13 +107,17 @@ div.aside-list-item {
 div.card-widget.card-categories { /*侧边栏分类*/
     font-family:fzfonts!important;
     font-size: 16px;
+    font-weight: bold;
 }
 div.card-tag-cloud {
-    font-family:fzfonts!important
+    font-family:fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 div.webinfo-item {
     font-family:fzfonts!important;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
 }
 span.line {
     font-family:firacode!important
@@ -100,4 +125,5 @@ span.line {
 ul.card-archive-list {
     font-family:fzfonts!important;
     font-size: 16px;
+    font-weight: bold;
 }
