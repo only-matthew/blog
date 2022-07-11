@@ -28,6 +28,7 @@ a.title {
 }
 div#post {
     font-family:fzfonts!important;
+    font-size: 14px;
 }
 div.item-headline {
     font-family:fzfonts!important
@@ -51,7 +52,7 @@ div.recent-post-item {
     font-family:fzfonts!important
 }
 div.content {
-    font-family: arzhu;
+    font-family: arzhu!important;
 }
 div.meta-firstline {
     font-family:fzfonts!important
@@ -64,6 +65,9 @@ div#sidebar-menus {
 }
 div#footer-wrap {
     font-family:arzhu!important
+}
+div#post-meta {
+    font-family: arzhu!important;
 }
 div.pagination {
     font-family:fzfonts!important
