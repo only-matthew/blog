@@ -28,6 +28,7 @@ a.title {
 }
 div#post {
     font-family:fzfonts!important;
+    font-size: 16px;
 }
 div.item-headline {
     font-family:fzfonts!important
@@ -56,6 +57,30 @@ div.meta-secondline {
 div#sidebar-menus {
     font-family:fzfonts!important
 }
+div#footer-wrap {
+    font-family:fzfonts!important
+}
+div.pagination {
+    font-family:fzfonts!important
+}
+div.card-widget.card-info {
+    font-family:fzfonts!important
+}
+div.aside-list-item {
+    font-family:fzfonts!important
+}
+div.card-widget.card-categories {
+    font-family:fzfonts!important
+}
+div.card-tag-cloud {
+    font-family:fzfonts!important
+}
+div.item-name {
+    font-family:fzfonts!important
+}
 span.line {
     font-family:firacode!important
+}
+ul.card-archive-list {
+    font-family:fzfonts!important
 }
