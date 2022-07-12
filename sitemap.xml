@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</loc>
+    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</loc>
+    <loc>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</loc>
+    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -209,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</loc>
+    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -227,15 +227,6 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/about/</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/TimeLine/</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -245,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/categories/</loc>
+    <loc>https://blog.loveoi.net/about/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -263,6 +254,15 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/categories/</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/chat/</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/</loc>
+    <loc>https://blog.loveoi.net/links/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -281,7 +281,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/links/</loc>
+    <loc>https://blog.loveoi.net/tags/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
