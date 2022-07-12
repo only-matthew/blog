@@ -21,7 +21,8 @@ span#subtitle {
     font-family:arzhu!important
 }
 a#site-name {
-    font-family:arzhu!important
+    font-family:arzhu!important;
+    font-size: 22px;
 }
 a.title {
     font-family:fzfonts!important;
@@ -50,7 +51,7 @@ div.footer-wrap {
 }
 div#menus {
     font-family:fzfonts!important;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
 }
 div#page {
