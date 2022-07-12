@@ -173,6 +173,15 @@
   </url>
   
   <url>
+    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -192,15 +201,6 @@
   
   <url>
     <loc>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -236,25 +236,7 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/about/</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/archives/</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.loveoi.net/chat/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -272,7 +254,16 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/tags/</loc>
+    <loc>https://blog.loveoi.net/about/</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/chat/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
@@ -282,6 +273,15 @@
   
   <url>
     <loc>https://blog.loveoi.net/links/</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/tags/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
