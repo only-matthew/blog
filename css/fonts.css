@@ -109,6 +109,11 @@ div.webinfo-item {
     font-size: 14px;
     font-weight: bold;
 }
+div.search-dialog {
+    font-family: fzfonts!important;
+    font-size: 16px;
+    font-weight: bold;
+}
 span.line {
     font-family:firacode!important;
 }

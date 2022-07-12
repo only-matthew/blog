@@ -333,9 +333,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断质数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[模板]判断回文数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -348,9 +348,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断回文数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[模板]判断质数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -471,22 +471,6 @@
       </tags>
   </entry>
   <entry>
-    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
-    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
-<p>可现在后悔又有什么用呢？</p>
-<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
-<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
-<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]折腾twikoo</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
     <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
@@ -506,6 +490,22 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
+    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
+<p>可现在后悔又有什么用呢？</p>
+<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
+<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
+<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -572,6 +572,20 @@
       </tags>
   </entry>
   <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]阿里dcdn折腾之旅</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
     <content><![CDATA[<h1 id="阿里dcdn折腾之旅"><a href="#阿里dcdn折腾之旅" class="headerlink" title="阿里dcdn折腾之旅"></a>阿里dcdn折腾之旅</h1><p>之前一直用的阿里cdn，但是听说动态网站能上dcdn就上吧。</p>
@@ -600,20 +614,6 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
 </search>
