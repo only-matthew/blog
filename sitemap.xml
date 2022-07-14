@@ -227,15 +227,6 @@
   </url>
   
   <url>
-    <loc>https://blog.loveoi.net/TimeLine/</loc>
-    
-    <lastmod>2022-07-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.loveoi.net/about/</loc>
     
     <lastmod>2022-07-09</lastmod>
@@ -246,6 +237,15 @@
   
   <url>
     <loc>https://blog.loveoi.net/archives/</loc>
+    
+    <lastmod>2022-07-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.loveoi.net/TimeLine/</loc>
     
     <lastmod>2022-07-09</lastmod>
     
