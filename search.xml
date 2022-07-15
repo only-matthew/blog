@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>[刷题记]Luogu-B2136</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
-    <content><![CDATA[<p>收获了新模板:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[刷题记]Luogu-B2133</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
+    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
+<ol>
+<li>a-2x&#x3D;n</li>
+<li>a&#x3D;cnt-x;</li>
+</ol>
+<p>∴ 	n&#x3D;cnt-3x</p>
+<p>依据条件，直接暴力：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>判断回文数。</p>
-<p>code:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2022&#x2F;6&#x2F;26</p>
+<p>2022&#x2F;6&#x2F;22</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -49,19 +52,16 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2133</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2133/</url>
-    <content><![CDATA[<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2133">B2133 我家的门牌号 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
-<p>我们设总门牌号之和为cnt，小明家门牌号为x，其他人门牌号之和为a(即cnt-x）,得：</p>
-<ol>
-<li>a-2x&#x3D;n</li>
-<li>a&#x3D;cnt-x;</li>
-</ol>
-<p>∴ 	n&#x3D;cnt-3x</p>
-<p>依据条件，直接暴力：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">long</span> <span class="type">long</span> <span class="type">int</span> n,cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%lld&quot;</span>,&amp;n);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> i=<span class="number">1</span>;;i++)&#123;</span><br><span class="line">        cnt+=i;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> <span class="type">int</span> j=<span class="number">1</span>;j&lt;=i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>((cnt<span class="number">-3</span>*j)==n)&#123;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;%lld %lld&quot;</span>,j,i);</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[刷题记]Luogu-B2136</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
+    <content><![CDATA[<p>收获了新模板:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>2022&#x2F;6&#x2F;22</p>
+<p>判断回文数。</p>
+<p>code:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2022&#x2F;6&#x2F;26</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -126,6 +126,58 @@
         <tag>luogu</tag>
         <tag>OI</tag>
         <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Course-Day-1</title>
+    <url>/OI/OI-Course/course-day-1/</url>
+    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
+<p>一般会省略常数项，所以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>的时间复杂度是O(1);</p>
+<p>所以在时间复杂度中 log的底数可以省略.</p>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><h3 id="粗略定义：整个程序占用了多大的内存。"><a href="#粗略定义：整个程序占用了多大的内存。" class="headerlink" title="粗略定义：整个程序占用了多大的内存。"></a>粗略定义：整个程序占用了多大的内存。</h3><h4 id="一个-int-占用-4-Byte-的内存"><a href="#一个-int-占用-4-Byte-的内存" class="headerlink" title="一个 int 占用 4 Byte 的内存"></a>一个 int 占用 4 Byte 的内存</h4><h4 id="一个-char-占用-1-Byte"><a href="#一个-char-占用-1-Byte" class="headerlink" title="一个 char 占用 1 Byte"></a>一个 char 占用 1 Byte</h4><h4 id="一个-long-long-占用-8-Byte"><a href="#一个-long-long-占用-8-Byte" class="headerlink" title="一个 long long 占用 8 Byte"></a>一个 long long 占用 8 Byte</h4><h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><p>所有类型需要以4byte为单位占用内存。</p>
+<blockquote>
+<p>sizeof是个假函数，在编译器就已经跑了.</p>
+</blockquote>
+<p>一个类型占用的空间和操作系统平台也息息相关。</p>
+<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
+<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
+</blockquote>
+<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>会直接在内存中写1e10个0，然而在CSP中有512KB限制</p>
+<p>所以应该:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
+<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
+
+<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
+<p>那么a，b会被重复调用</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">viod <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
+
+<p>那么输出会</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
+
+<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label yellow">效率</mark> 。</p>
+<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
+<blockquote>
+<p>This post was written on July 22, 2022 at 22:45</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
       </tags>
   </entry>
   <entry>
@@ -424,6 +476,53 @@
       </tags>
   </entry>
   <entry>
+    <title>[笔记]初赛笔记2021-8-20</title>
+    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
+    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
+<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
+<li>树：<ol>
+<li>N个节点，N-1条边</li>
+<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
+</ol>
+</li>
+<li>森林:树的集合<ol>
+<li>边的数量是顶点数-1</li>
+<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
+<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
+<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
+</ol>
+</li>
+<li>完全图有n(n-1)&#x2F;2个节点</li>
+<li>用1维表示2平面，纵坐标*3+横坐标</li>
+<li>对于每一位都有0&amp;0&#x3D;0&amp;1&#x3D;1&amp;0&#x3D;0和1&amp;1&#x3D; 1</li>
+</ol>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
+    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
+<p>可现在后悔又有什么用呢？</p>
+<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
+<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
+<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>幡然醒悟</title>
     <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
     <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
@@ -459,53 +558,6 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
-    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
-<p>可现在后悔又有什么用呢？</p>
-<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
-<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
-<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[笔记]初赛笔记2021-8-20</title>
-    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
-    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
-<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
-<li>树：<ol>
-<li>N个节点，N-1条边</li>
-<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
-</ol>
-</li>
-<li>森林:树的集合<ol>
-<li>边的数量是顶点数-1</li>
-<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
-<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
-<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
-</ol>
-</li>
-<li>完全图有n(n-1)&#x2F;2个节点</li>
-<li>用1维表示2平面，纵坐标*3+横坐标</li>
-<li>对于每一位都有0&amp;0&#x3D;0&amp;1&#x3D;1&amp;0&#x3D;0和1&amp;1&#x3D; 1</li>
-</ol>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -572,6 +624,20 @@
       </tags>
   </entry>
   <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]阿里dcdn折腾之旅</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
     <content><![CDATA[<h1 id="阿里dcdn折腾之旅"><a href="#阿里dcdn折腾之旅" class="headerlink" title="阿里dcdn折腾之旅"></a>阿里dcdn折腾之旅</h1><p>之前一直用的阿里cdn，但是听说动态网站能上dcdn就上吧。</p>
@@ -600,20 +666,6 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-07-14T08:33:15.371Z</updated>
+  <updated>2022-07-15T14:46:36.632Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Course-Day-1</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/course-day-1/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/course-day-1/</id>
+    <published>2022-07-15T13:38:19.083Z</published>
+    <updated>2022-07-15T14:46:36.632Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天是课程的第一天，众所周知上课不做笔记等于没上。&lt;/p&gt;
+&lt;h1 id=&quot;时间复杂度&quot;&gt;&lt;a href=&quot;#时间复杂度&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo设置自定义字体粗细</title>
@@ -50,7 +82,7 @@
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</id>
     <published>2022-07-10T13:58:24.000Z</published>
-    <updated>2022-07-10T14:09:49.368Z</updated>
+    <updated>2022-07-15T13:49:22.605Z</updated>
     
     
       
@@ -553,36 +585,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
-    
-    <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
-    
-    
-    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
-    
-    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[折腾]白嫖linuxone</title>
-    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/"/>
-    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</id>
-    <published>2022-06-23T05:05:12.000Z</published>
-    <updated>2022-07-09T15:48:50.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;偶然看到Linuxone可以白嫖，就愉快的去申请了个。&lt;a href=&quot;https://linuxone.cloud.marist.edu/#/login&quot;&gt;链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
