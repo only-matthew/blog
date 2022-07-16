@@ -26,28 +26,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2136</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
-    <content><![CDATA[<p>收获了新模板:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>判断回文数。</p>
-<p>code:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2022&#x2F;6&#x2F;26</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[刷题记]Luogu-B2140</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
     <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
@@ -74,6 +52,46 @@
       </tags>
   </entry>
   <entry>
+    <title>[刷题记]Luogu-B2136</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
+    <content><![CDATA[<p>收获了新模板:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>判断回文数。</p>
+<p>code:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2022&#x2F;6&#x2F;26</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[刷题记]Luogu-P8401</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
+    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2022&#x2F;6&#x2F;25</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[刷题记]Luogu-P6321</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
     <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。</p>
@@ -88,6 +106,26 @@
         <tag>luogu</tag>
         <tag>OI</tag>
         <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]进制转换(10 to 2)</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
+    <content><![CDATA[<p>code:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>This article was written on 2022&#x2F;7&#x2F;10.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
       </tags>
   </entry>
   <entry>
@@ -127,7 +165,7 @@
 <p>那么输出会</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
 
-<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label yellow">效率</mark> 。</p>
+<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
 <h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
 <p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
@@ -146,71 +184,12 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-P8401</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
-    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>2022&#x2F;6&#x2F;25</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[模板]进制转换(10 to 2)</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
-    <content><![CDATA[<p>code:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>This article was written on 2022&#x2F;7&#x2F;10.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]hexo修改模板</title>
     <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[折腾]hexo折腾waline评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
-<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
-<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
-<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
-<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
-<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
-<p>2022&#x2F;6&#x2F;29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -354,6 +333,27 @@
 <blockquote>
 <p>This article was written on July 11, 2022.</p>
 </blockquote>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo折腾waline评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
+<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
+<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
+<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
+<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
+<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
+<p>2022&#x2F;6&#x2F;29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -510,24 +510,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[折腾]使用阿里云函数和微博图床搭建高速随机图片api</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</url>
-    <content><![CDATA[<h1 id="使用阿里云函数和微博图床搭建高速随机图片api"><a href="#使用阿里云函数和微博图床搭建高速随机图片api" class="headerlink" title="使用阿里云函数和微博图床搭建高速随机图片api"></a>使用阿里云函数和微博图床搭建高速随机图片api</h1><p>之前用的也是阿里云函数，图片放到阿里oss+阿里cdn，然而速度总是那么不尽人意。<br>然后看到别人（ &lt; api.vinua.cn&#x2F;tuapi &gt; )放在美国1h1g但是速度秒杀我时，我自闭了。</p>
-<p>仔细分析了原因后我明白了，美国服务器产生随机图片重定向不需要很久的时间，大约100~200ms（算上延迟）</p>
-<p>那我放在阿里云函数那速度不是比他美国还快？所以我把图片从阿里oss+cdn搬到了微博图片上，微博那cdn叫一个快啊！</p>
-<p>适用于阿里云函数的随机图片源码我找了很久都找不到，希望我自己写的可以帮到你。</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">RingCentral</span>\<span class="title">Psr7</span>\<span class="title">Response</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"><span class="variable">$request</span>, <span class="variable">$context</span></span>): <span class="title">Response</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable">$filename</span> = <span class="string">&quot;imgurl.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//从文本获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pics</span> = [];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fs</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filename</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(!<span class="title function_ invoke__">feof</span>(<span class="variable">$fs</span>))&#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$line</span>=<span class="title function_ invoke__">trim</span>(<span class="title function_ invoke__">fgets</span>(<span class="variable">$fs</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$line</span>!=<span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line"></span><br><span class="line">      <span class="title function_ invoke__">array_push</span>(<span class="variable">$pics</span>, <span class="variable">$line</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;  </span><br><span class="line"></span><br><span class="line">  <span class="comment">//从数组随机获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="variable">$pics</span>[<span class="title function_ invoke__">array_rand</span>(<span class="variable">$pics</span>)];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$num</span>=<span class="title function_ invoke__">rand</span>(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">//随机变量</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;https://tva4&quot;</span>,<span class="string">&quot;https://tva&quot;</span>.<span class="variable">$num</span>,<span class="variable">$pic</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(</span><br><span class="line"></span><br><span class="line">    <span class="number">302</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line"></span><br><span class="line">      <span class="string">&#x27;Location&#x27;</span> =&gt; <span class="variable">$pic</span></span><br><span class="line"></span><br><span class="line">    ),</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vscode配置firacode字体</title>
     <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
@@ -583,6 +565,24 @@
       </tags>
   </entry>
   <entry>
+    <title>[折腾]使用阿里云函数和微博图床搭建高速随机图片api</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</url>
+    <content><![CDATA[<h1 id="使用阿里云函数和微博图床搭建高速随机图片api"><a href="#使用阿里云函数和微博图床搭建高速随机图片api" class="headerlink" title="使用阿里云函数和微博图床搭建高速随机图片api"></a>使用阿里云函数和微博图床搭建高速随机图片api</h1><p>之前用的也是阿里云函数，图片放到阿里oss+阿里cdn，然而速度总是那么不尽人意。<br>然后看到别人（ &lt; api.vinua.cn&#x2F;tuapi &gt; )放在美国1h1g但是速度秒杀我时，我自闭了。</p>
+<p>仔细分析了原因后我明白了，美国服务器产生随机图片重定向不需要很久的时间，大约100~200ms（算上延迟）</p>
+<p>那我放在阿里云函数那速度不是比他美国还快？所以我把图片从阿里oss+cdn搬到了微博图片上，微博那cdn叫一个快啊！</p>
+<p>适用于阿里云函数的随机图片源码我找了很久都找不到，希望我自己写的可以帮到你。</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">RingCentral</span>\<span class="title">Psr7</span>\<span class="title">Response</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handler</span>(<span class="params"><span class="variable">$request</span>, <span class="variable">$context</span></span>): <span class="title">Response</span></span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="variable">$filename</span> = <span class="string">&quot;imgurl.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//从文本获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pics</span> = [];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$fs</span> = <span class="title function_ invoke__">fopen</span>(<span class="variable">$filename</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">while</span>(!<span class="title function_ invoke__">feof</span>(<span class="variable">$fs</span>))&#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$line</span>=<span class="title function_ invoke__">trim</span>(<span class="title function_ invoke__">fgets</span>(<span class="variable">$fs</span>));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">$line</span>!=<span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line"></span><br><span class="line">      <span class="title function_ invoke__">array_push</span>(<span class="variable">$pics</span>, <span class="variable">$line</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;  </span><br><span class="line"></span><br><span class="line">  <span class="comment">//从数组随机获取链接</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="variable">$pics</span>[<span class="title function_ invoke__">array_rand</span>(<span class="variable">$pics</span>)];</span><br><span class="line"></span><br><span class="line">  <span class="variable">$num</span>=<span class="title function_ invoke__">rand</span>(<span class="number">1</span>,<span class="number">4</span>);<span class="comment">//随机变量</span></span><br><span class="line"></span><br><span class="line">  <span class="variable">$pic</span> = <span class="title function_ invoke__">str_replace</span>(<span class="string">&quot;https://tva4&quot;</span>,<span class="string">&quot;https://tva&quot;</span>.<span class="variable">$num</span>,<span class="variable">$pic</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Response</span>(</span><br><span class="line"></span><br><span class="line">    <span class="number">302</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">array</span>(</span><br><span class="line"></span><br><span class="line">      <span class="string">&#x27;Location&#x27;</span> =&gt; <span class="variable">$pic</span></span><br><span class="line"></span><br><span class="line">    ),</span><br><span class="line"></span><br><span class="line">    <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>幡然醒悟</title>
     <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
     <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
@@ -590,6 +590,26 @@
 <mark class="hl-label red">自种之果当自食</mark> 
 
 <p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>挥之不去的身影</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
+    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
+<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索的为什么是空的，不远处的谈话声</p>
+<p>打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
+<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
+<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终身难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
+<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。<br>我甩了甩头，丢弃这些杂念，开始做题。</p>
+<p>那一场考试的结果是注定的――分数甚至低于瞎蒙。</p>
+<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
+<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
 ]]></content>
       <categories>
         <category>自写</category>
@@ -637,26 +657,6 @@
       </tags>
   </entry>
   <entry>
-    <title>挥之不去的身影</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
-    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
-<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索的为什么是空的，不远处的谈话声</p>
-<p>打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
-<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
-<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终身难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
-<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。<br>我甩了甩头，丢弃这些杂念，开始做题。</p>
-<p>那一场考试的结果是注定的――分数甚至低于瞎蒙。</p>
-<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
-<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]白嫖linuxone</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
     <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
@@ -673,6 +673,20 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -697,20 +711,6 @@
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
