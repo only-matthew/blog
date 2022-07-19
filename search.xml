@@ -25,18 +25,14 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2140</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
-    <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
-<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2140">B2140 二进制分类 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
-<p>想了很久才想出这个模板：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以在草稿纸上演算一下。</p>
-<p>code：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, ansa, ansb;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> tmp = <span class="built_in">decToBin</span>(i), n1 = <span class="number">0</span>, n0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (tmp != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp % <span class="number">10</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                n1++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                n0++;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n1 &gt; n0)</span><br><span class="line">        &#123;</span><br><span class="line">            ansa++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            ansb++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, ansa, ansb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>This article was written on 2022/7/10.</p>
-</blockquote>
+    <title>[刷题记]Luogu-B2136</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
+    <content><![CDATA[<p>收获了新模板:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>判断回文数。</p>
+<p>code:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/26</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -49,14 +45,18 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2136</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
-    <content><![CDATA[<p>收获了新模板:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>判断回文数。</p>
-<p>code:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/26</p>
+    <title>[刷题记]Luogu-B2140</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
+    <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
+<p>题目传送门：<a href="https://www.luogu.com.cn/problem/B2140">B2140 二进制分类 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>想了很久才想出这个模板：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以在草稿纸上演算一下。</p>
+<p>code：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, ansa, ansb;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">decToBin</span><span class="params">(<span class="type">int</span> dec)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>, temp = dec, j = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % <span class="number">2</span>);</span><br><span class="line">        temp = temp / <span class="number">2</span>;</span><br><span class="line">        j = j * <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> tmp = <span class="built_in">decToBin</span>(i), n1 = <span class="number">0</span>, n0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (tmp != <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (tmp % <span class="number">10</span> == <span class="number">1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                n1++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                n0++;</span><br><span class="line">            &#125;</span><br><span class="line">            tmp /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n1 &gt; n0)</span><br><span class="line">        &#123;</span><br><span class="line">            ansa++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            ansb++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d %d&quot;</span>, ansa, ansb);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This article was written on 2022/7/10.</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -125,9 +125,9 @@
 <p>尝试每一种情况。当然，一些不可能的情况可以不去枚举，以此优化时间复杂度。</p>
 <p>现代cpu的运算速度一般达到了2000w/s，所以只要预估不超过2000w的运算，那么这个算法就是可行的。</p>
 <script type="math/tex; mode=display">
-O(n^{2})一般可以跑5000的数据\newline
-O(n^{3})一般可以跑500的数据\newline
-O(n!)只能跑到10\newline</script><blockquote>
+O(n^{2})一般可以跑5000的数据</script><script type="math/tex; mode=display">
+O(n^{3})一般可以跑500的数据</script><script type="math/tex; mode=display">
+O(n!)只能跑到10</script><blockquote>
 <p>因为时间复杂度是预估的，实际可能更大或者更小</p>
 </blockquote>
 <h1 id="Learned："><a href="#Learned：" class="headerlink" title="Learned："></a>Learned：</h1><h2 id="递归枚举——深度优先搜索（Depth-first-search）"><a href="#递归枚举——深度优先搜索（Depth-first-search）" class="headerlink" title="递归枚举——深度优先搜索（Depth-first search）"></a>递归枚举——深度优先搜索（Depth-first search）</h2><h3 id="枚举子集"><a href="#枚举子集" class="headerlink" title="枚举子集"></a>枚举子集</h3><p>今有 n<em>n</em> 位同学，可以从中选出任意名同学参加合唱。</p>
@@ -151,6 +151,22 @@ O(n!)只能跑到10\newline</script><blockquote>
         <tag>luogu</tag>
         <tag>OI</tag>
         <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo修改模板</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -200,43 +216,6 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[折腾]hexo修改模板</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo设置自定义字体粗细</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
-    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
-<p>如果不想弄可以直接改body</p>
-<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
-<blockquote>
-<p>This article was written on July 11, 2022.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[模板]进制转换(10 to 2)</title>
     <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
     <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -265,6 +244,27 @@ O(n!)只能跑到10\newline</script><blockquote>
 <p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
 <p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
 <p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo设置自定义字体粗细</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
+    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
+<p>如果不想弄可以直接改body</p>
+<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
+<blockquote>
+<p>This article was written on July 11, 2022.</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -373,6 +373,20 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
+    <title>[模板]判断质数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]hexo配置评论</title>
     <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
     <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
@@ -396,9 +410,26 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断质数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[模板]快读&amp;快写</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
+    <content><![CDATA[<p>快读：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>快写：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]判断回文数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -480,20 +511,6 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断回文数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vscode配置firacode字体</title>
     <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
@@ -518,23 +535,6 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[模板]快读&amp;快写</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
-    <content><![CDATA[<p>快读：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>快写：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]使用阿里云函数和微博图床搭建高速随机图片api</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91%E5%87%BD%E6%95%B0%E5%92%8C%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA%E9%AB%98%E9%80%9F%E9%9A%8F%E6%9C%BA%E5%9B%BE%E7%89%87api/</url>
     <content><![CDATA[<h1 id="使用阿里云函数和微博图床搭建高速随机图片api"><a href="#使用阿里云函数和微博图床搭建高速随机图片api" class="headerlink" title="使用阿里云函数和微博图床搭建高速随机图片api"></a>使用阿里云函数和微博图床搭建高速随机图片api</h1><p>之前用的也是阿里云函数，图片放到阿里oss+阿里cdn，然而速度总是那么不尽人意。<br>然后看到别人（ &lt; api.vinua.cn/tuapi &gt; )放在美国1h1g但是速度秒杀我时，我自闭了。</p>
@@ -550,37 +550,6 @@ O(n!)只能跑到10\newline</script><blockquote>
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[笔记]初赛笔记2021-8-20</title>
-    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
-    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
-<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
-<li>树：<ol>
-<li>N个节点，N-1条边</li>
-<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
-</ol>
-</li>
-<li>森林:树的集合<ol>
-<li>边的数量是顶点数-1</li>
-<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
-<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
-<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
-</ol>
-</li>
-<li>完全图有n(n-1)/2个节点</li>
-<li>用1维表示2平面，纵坐标*3+横坐标</li>
-<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
-</ol>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -615,25 +584,34 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[折腾]折腾twikoo</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
-    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
-<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
-<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
-<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
-<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
-<p>2022/6/29</p>
+    <title>[笔记]初赛笔记2021-8-20</title>
+    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
+    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
+<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
+<li>树：<ol>
+<li>N个节点，N-1条边</li>
+<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
+</ol>
+</li>
+<li>森林:树的集合<ol>
+<li>边的数量是顶点数-1</li>
+<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
+<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
+<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
+</ol>
+</li>
+<li>完全图有n(n-1)/2个节点</li>
+<li>用1维表示2平面，纵坐标*3+横坐标</li>
+<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
+</ol>
 ]]></content>
       <categories>
-        <category>折腾</category>
-        <category>Web</category>
+        <category>OI</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
+        <tag>OI</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -657,14 +635,17 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[折腾]白嫖linuxone</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
-    <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
-<p><img src="https://img.oier.xin/img/image-20220623095350976.png" alt="image-20220623095350976"></p>
-<p>我是用gmail注册的，所以理由用英语随便写点什么就好了，比如：test my website</p>
-<p><img src="https://img.oier.xin/img/image-20220623095534665.png" alt="image-20220623095534665"></p>
-<p>创建即可，注意创建的时候有个坑，密钥上传或者创建后要选择否则无法创建。</p>
-<p>等大约5分钟就会显示ip，使用user：linux1和你刚刚创建或者上传的密钥登录即可。<br>这玩意儿是s390x架构，我这个啥端口也没开（看有些人的全开了），似乎啥也干不了（哭笑）<br>2022/6/23</p>
+    <title>[折腾]折腾twikoo</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
+    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
+<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
+<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
+<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
+<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
+<p>2022/6/29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -676,26 +657,14 @@ O(n!)只能跑到10\newline</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[折腾]阿里dcdn折腾之旅</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
-    <content><![CDATA[<h1 id="阿里dcdn折腾之旅"><a href="#阿里dcdn折腾之旅" class="headerlink" title="阿里dcdn折腾之旅"></a>阿里dcdn折腾之旅</h1><p>之前一直用的阿里cdn，但是听说动态网站能上dcdn就上吧。</p>
-<p>愉快的打开了阿里dcdn控制台，开通服务。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143028926.png" alt="image-20220502143028926"></p>
-<p>配置了向导的优化。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143111821.png" alt="image-20220502143111821"></p>
-<p>以及ssl证书，虽然要单独收费，但是还是很实惠的。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143153913.png" alt="image-20220502143153913"></p>
-<p>还有缓存配置！非常重要！！！！不然等一下就越加速越慢了。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143240278.png" alt="image-20220502143240278"></p>
-<p>php一定要是0s！！！不然设置1分钟打开相应就要一分钟。</p>
-<p>js和css时间可以长一些，我设置的是1月。</p>
-<p>其他的静态文件就随意吧，要长一些，通常比js和css长。</p>
-<p>我blog用的是typecho，配置了阿里的静态路径，要配置的可以参考。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143453761.png" alt="image-20220502143453761"></p>
-<p>再打开range回源就完事了，range文档说的不开这玩意儿就损失大了，必须开。</p>
-<p><img src="https://img.oier.xin/img/image-20220502143613437.png" alt="image-20220502143613437"></p>
-<p>(文档链接)[<a href="https://help.aliyun.com/document_detail/68473.html?spm=5176.11220512.help.dexternal.10f572f0nHMt59">https://help.aliyun.com/document_detail/68473.html?spm=5176.11220512.help.dexternal.10f572f0nHMt59</a>]</p>
-<p>上了dcdn后速度果然提升了不少，可惜不能配置宽带封顶，有人打我可能阿里余额就全没了。</p>
+    <title>[折腾]白嫖linuxone</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
+    <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
+<p><img src="https://img.oier.xin/img/image-20220623095350976.png" alt="image-20220623095350976"></p>
+<p>我是用gmail注册的，所以理由用英语随便写点什么就好了，比如：test my website</p>
+<p><img src="https://img.oier.xin/img/image-20220623095534665.png" alt="image-20220623095534665"></p>
+<p>创建即可，注意创建的时候有个坑，密钥上传或者创建后要选择否则无法创建。</p>
+<p>等大约5分钟就会显示ip，使用user：linux1和你刚刚创建或者上传的密钥登录即可。<br>这玩意儿是s390x架构，我这个啥端口也没开（看有些人的全开了），似乎啥也干不了（哭笑）<br>2022/6/23</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -741,6 +710,37 @@ O(n!)只能跑到10\newline</script><blockquote>
       </categories>
       <tags>
         <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]阿里dcdn折腾之旅</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E9%98%BF%E9%87%8Cdcdn%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
+    <content><![CDATA[<h1 id="阿里dcdn折腾之旅"><a href="#阿里dcdn折腾之旅" class="headerlink" title="阿里dcdn折腾之旅"></a>阿里dcdn折腾之旅</h1><p>之前一直用的阿里cdn，但是听说动态网站能上dcdn就上吧。</p>
+<p>愉快的打开了阿里dcdn控制台，开通服务。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143028926.png" alt="image-20220502143028926"></p>
+<p>配置了向导的优化。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143111821.png" alt="image-20220502143111821"></p>
+<p>以及ssl证书，虽然要单独收费，但是还是很实惠的。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143153913.png" alt="image-20220502143153913"></p>
+<p>还有缓存配置！非常重要！！！！不然等一下就越加速越慢了。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143240278.png" alt="image-20220502143240278"></p>
+<p>php一定要是0s！！！不然设置1分钟打开相应就要一分钟。</p>
+<p>js和css时间可以长一些，我设置的是1月。</p>
+<p>其他的静态文件就随意吧，要长一些，通常比js和css长。</p>
+<p>我blog用的是typecho，配置了阿里的静态路径，要配置的可以参考。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143453761.png" alt="image-20220502143453761"></p>
+<p>再打开range回源就完事了，range文档说的不开这玩意儿就损失大了，必须开。</p>
+<p><img src="https://img.oier.xin/img/image-20220502143613437.png" alt="image-20220502143613437"></p>
+<p>(文档链接)[<a href="https://help.aliyun.com/document_detail/68473.html?spm=5176.11220512.help.dexternal.10f572f0nHMt59">https://help.aliyun.com/document_detail/68473.html?spm=5176.11220512.help.dexternal.10f572f0nHMt59</a>]</p>
+<p>上了dcdn后速度果然提升了不少，可惜不能配置宽带封顶，有人打我可能阿里余额就全没了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
 </search>
