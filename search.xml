@@ -25,26 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2136</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
-    <content><![CDATA[<p>收获了新模板:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>判断回文数。</p>
-<p>code:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/26</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[刷题记]Luogu-B2140</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
     <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
@@ -69,57 +49,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Course-Day-1</title>
-    <url>/OI/OI-Course/course-day-1/</url>
-    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
-<p>一般会省略常数项，所以</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>的时间复杂度是O(1);</p>
-<p>所以在时间复杂度中 log的底数可以省略.</p>
-<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
-<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
-<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
-<p>sizeof是个假函数，在编译器就已经跑了.</p>
-</blockquote>
-<p>一个类型占用的空间和操作系统平台也息息相关。</p>
-<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
-<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
-</blockquote>
-<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
-<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
-<p>所以应该:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
-<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
-<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
-<p>那么a，b会被重复调用</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
-<p>那么输出会</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
-<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
-<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
-<blockquote>
-<p>This post was written on July 22, 2022 at 22:45</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[刷题记]Luogu-P8401</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
-    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/25</p>
+    <title>[刷题记]Luogu-B2136</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
+    <content><![CDATA[<p>收获了新模板:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>判断回文数。</p>
+<p>code:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/26</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -135,6 +72,23 @@
     <title>[刷题记]Luogu-P6321</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
     <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[刷题记]Luogu-P8401</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
+    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/25</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -200,37 +154,49 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[模板]进制转换(10 to 2)</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
-    <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <title>Course-Day-1</title>
+    <url>/OI/OI-Course/course-day-1/</url>
+    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
+<p>一般会省略常数项，所以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>的时间复杂度是O(1);</p>
+<p>所以在时间复杂度中 log的底数可以省略.</p>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
+<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
+<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
+<p>sizeof是个假函数，在编译器就已经跑了.</p>
+</blockquote>
+<p>一个类型占用的空间和操作系统平台也息息相关。</p>
+<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
+<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
+</blockquote>
+<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
+<p>所以应该:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
+<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
+<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
+<p>那么a，b会被重复调用</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
+<p>那么输出会</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
+<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
+<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
 <blockquote>
-<p>This article was written on 2022/7/10.</p>
+<p>This post was written on July 22, 2022 at 22:45</p>
 </blockquote>
 ]]></content>
       <categories>
         <category>OI</category>
-        <category>OI模板</category>
+        <category>OI-Course</category>
       </categories>
       <tags>
         <tag>luogu</tag>
         <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[折腾]hexo修改模板</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
+        <tag>Course</tag>
       </tags>
   </entry>
   <entry>
@@ -239,12 +205,11 @@ O(n!)只能跑到10</script><blockquote>
     <content><![CDATA[<blockquote>
 <p>Today is the fifth day of the course.</p>
 </blockquote>
-<p>今天可以开始学习普及组总最难的内容了！</p>
 <h1 id="Note"><a href="#Note" class="headerlink" title="Note:"></a>Note:</h1><h2 id="dp是什么？"><a href="#dp是什么？" class="headerlink" title="dp是什么？"></a>dp是什么？</h2><blockquote>
 <p>动态规划（DP）不是某种具体算法，而是一种思想。<br>核心在于：把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
 </blockquote>
 <h2 id="什么是状态？"><a href="#什么是状态？" class="headerlink" title="什么是状态？"></a>什么是状态？</h2><h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="《硬币问题》"><a href="#《硬币问题》" class="headerlink" title="《硬币问题》"></a>《硬币问题》</h4><blockquote>
-<p><a href="https://www.luogu.com.cn/problem/B3635">B3635 硬币问题 - 洛谷 | 计算机科学教育新生态 (luogu.com.cn)</a></p>
+<p>Luogu-B3635</p>
 <p>今天你手上有无限的面值为1,5,11 元的硬币。<br>给定n，问：至少用多少枚硬币，可以恰好凑出n 元？</p>
 </blockquote>
 <h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><blockquote>
@@ -268,10 +233,10 @@ f[x]=f[x-1]+1</script><p>如果<em>x</em>是偶数，那么他可能是<em>+1</e
 <script type="math/tex; mode=display">
 f[x]=min(f[x-1],f[x/2])+1</script><p>所以状态转移方程为：</p>
 <script type="math/tex; mode=display">
-f(x)=
+f[x]=
 \begin{cases}
 f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=min(f[x-1],f[x/2])+1 & {x|x=2n, n∈N}
+f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
 \end{cases}</script><h3 id="初步总结：状态"><a href="#初步总结：状态" class="headerlink" title="初步总结：状态"></a>初步总结：状态</h3><blockquote>
 <p>硬币问题中，要表达“我们需要凑出n 元钱”这个局面，可以设计状态：“f[x] 表示凑出x 元用的最少硬币数”。<br>上楼梯问题中，设计状态：“f[x] 表示走上x 级的方案数”。</p>
 </blockquote>
@@ -328,16 +293,16 @@ f[p]</script><h3 id="小结：设计转移"><a href="#小结：设计转移" cla
 </blockquote>
 <p>和刚刚的《凑字》问题是一模一样的，dp：</p>
 <script type="math/tex; mode=display">
-f(x)=
+f[x]=
 \begin{cases}
 f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=min(f[x-1],f[x/2])+1 & {x|x=2n, n∈N}
+f[x]=min(f[x-1],f[x/2])+1 & \{x|x=2n, n∈Z\}
 \end{cases}</script><p>而贪心要好写一些：</p>
 <script type="math/tex; mode=display">
-f(x)=
+f[x]=
 \begin{cases}
 f[x]=f[x-1]+1 & \{x|x=2n+1，n∈Z\}\newline 
-f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
+f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
 \end{cases}</script><p>可以看到，贪心是直接使用了<em>f[x/2]+1</em>而不去确认是否有更优解，贪心是对当前状态下的最优解而不是全局最优解，所以人们说贪心是“目光短浅”的。但是对于这道题，贪心更快也更好些。而dp开头讲过,dp是把大问题转化为小问题，利用小问题的解，推断出大问题的解。</p>
 <p>这便是dp与贪心的区别，他们之间没有目前的分界线，可能一道题贪心和dp都占了。</p>
 <blockquote>
@@ -359,6 +324,61 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
         <tag>luogu</tag>
         <tag>OI</tag>
         <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[模板]进制转换(10 to 2)</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
+    <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>This article was written on 2022/7/10.</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo折腾waline评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
+<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
+<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
+<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
+<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
+<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
+<p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo修改模板</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -448,27 +468,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># The banner image of home page</span><br><span class="line">index_img: https://api.oier.xin/pic?spm=1</span><br><span class="line"></span><br><span class="line"># If the banner of page not setting, it will show the top_img</span><br><span class="line">default_top_img: https://api.oier.xin/pic?spm=2</span><br><span class="line"></span><br><span class="line"># The banner image of archive page</span><br><span class="line">archive_img: https://api.oier.xin/pic?spm=3</span><br><span class="line"></span><br><span class="line"># If the banner of tag page not setting, it will show the top_img</span><br><span class="line"># note: tag page, not tags page (子標籤頁面的 top_img)</span><br><span class="line">tag_img: https://api.oier.xin/pic?spm=4</span><br><span class="line"></span><br><span class="line"># The banner image of tag page</span><br><span class="line"># format:</span><br><span class="line">#  - tag name: xxxxx</span><br><span class="line">tag_per_img: https://api.oier.xin/pic?spm=5</span><br><span class="line"></span><br><span class="line"># If the banner of category page not setting, it will show the top_img</span><br><span class="line"># note: category page, not categories page (子分類頁面的 top_img)</span><br><span class="line">category_img: https://api.oier.xin/pic?spm=6</span><br><span class="line"></span><br><span class="line"># The banner image of category page</span><br><span class="line"># format:</span><br><span class="line">#  - category name: xxxxx</span><br><span class="line">category_per_img: https://api.oier.xin/pic?spm=7</span><br><span class="line"></span><br><span class="line">cover:</span><br><span class="line">  # display the cover or not (是否顯示文章封面)</span><br><span class="line">  index_enable: true</span><br><span class="line">  aside_enable: true</span><br><span class="line">  archives_enable: true</span><br><span class="line">  # the position of cover in home page (封面顯示的位置)</span><br><span class="line">  # left/right/both</span><br><span class="line">  position: both</span><br><span class="line">  # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)</span><br><span class="line">  default_cover:</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jkxndsoj33421r7twi.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jkvv6mzj33cc1vkb29.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jku9yltj32yo1o1h3v.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jkts05rj31hc0u0qdv.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jkt7unkj33dz1wqtgn.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h25jkqdpvlj33341qf1g6.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h24x57ulfkj33ce1vzhdt.jpg</span><br><span class="line">  - https://tva4.sinaimg.cn/large/008jvtsVgy1h277kswgasj32yo1uou12.jpg</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>参考我的和官方我的即可达到效果.</p>
 <h1 id="自定义css"><a href="#自定义css" class="headerlink" title="自定义css"></a>自定义css</h1><p>可以查看折腾之旅（二）</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[折腾]hexo折腾waline评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
-<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
-<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
-<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
-<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
-<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
-<p>2022/6/29</p>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -712,21 +711,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
       </tags>
   </entry>
   <entry>
-    <title>幡然醒悟</title>
-    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
-    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
-<p>读书便读书，心当静，习当良，性当韧。读书之时，不应任何杂念，不应在似通非通之时放弃。读书，当<mark class="hl-label blue">透</mark> ，当<mark class="hl-label red">全</mark> ，当读之所学如与生俱来，方可于考场之上立于不败之地！</p>
-<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我本可以忍受黑暗 如果我不曾见过光明</title>
     <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
     <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
@@ -743,25 +727,18 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]折腾twikoo</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
-    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
-<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
-<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
-<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
-<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
-<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
-<p>2022/6/29</p>
+    <title>幡然醒悟</title>
+    <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
+    <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
+<p>读书便读书，心当静，习当良，性当韧。读书之时，不应任何杂念，不应在似通非通之时放弃。读书，当<mark class="hl-label blue">透</mark> ，当<mark class="hl-label red">全</mark> ，当读之所学如与生俱来，方可于考场之上立于不败之地！</p>
+<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
 ]]></content>
       <categories>
-        <category>折腾</category>
-        <category>Web</category>
+        <category>自写</category>
       </categories>
       <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -828,6 +805,41 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
       </tags>
   </entry>
   <entry>
+    <title>[折腾]折腾twikoo</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
+    <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
+<p><a href="https://twikoo.js.org/quick-start.html">官方文档</a></p>
+<p>因为一直用的阿里云，又不想让自己的腾讯云新用户没了，就打算 Vercel 部署。</p>
+<p>官方甚至还有视频教程：<a href="https://www.bilibili.com/video/BV1Fh411e7ZH">Twikoo Vercel 部署教程_哔哩哔哩_bilibili</a></p>
+<iframe src="//player.bilibili.com/player.html?aid=205905942&bvid=BV1Fh411e7ZH&cid=349476933&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<p>打开mongodb cloud，注册，按照视频和文档操作（其实就是设置密码什么的）</p>
+<p>然后在<a href="https://vercel.com/signup">Vercel</a>设置变量即可。</p>
+<p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>长知识了</title>
     <url>/Share/%E9%95%BF%E7%9F%A5%E8%AF%86%E4%BA%86/</url>
     <content><![CDATA[<p>真就长知识了！如果这次有人干了这个事，就会一直包揽和这个东西有关的活甚至这类活，还没报酬。</p>
@@ -843,19 +855,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈N\}
       </categories>
       <tags>
         <tag>Share</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
