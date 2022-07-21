@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-07-21T07:38:53.005Z</updated>
+  <updated>2022-07-21T13:20:50.391Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-sakura</title>
+    <link href="https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/"/>
+    <id>https://blog.loveoi.net/%E6%8A%98%E8%85%BE/Web/hexo-sakura/</id>
+    <published>2022-07-21T13:17:23.000Z</published>
+    <updated>2022-07-21T13:20:50.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前两天回去折腾了一下wordpress，那个代码块和公式块给我整傻了，还是回来弄hexo算了，但是还是很重要我wordpress主题的樱花飘落特效，所以给hexo也折腾了一下，从网上找到了js（樱花图片是直接base64编码的，所以js有亿点长）：&lt;/p&gt;
+&lt;figure</summary>
+        
+      
+    
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/categories/%E6%8A%98%E8%85%BE/Web/"/>
+    
+    
+    <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
+    
+    <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
+    
+  </entry>
   
   <entry>
     <title>Courses-day-5-DP(动态规划)的初步学习-第一部分</title>
@@ -558,35 +588,6 @@
         
     <summary type="html">&lt;p&gt;快读：&lt;/p&gt;
 &lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[模板]判断质数</title>
-    <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/"/>
-    <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</id>
-    <published>2022-06-26T12:11:57.000Z</published>
-    <updated>2022-07-09T15:48:50.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
         
       
     
