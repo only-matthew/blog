@@ -101,52 +101,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Course-Day-1</title>
-    <url>/OI/OI-Course/course-day-1/</url>
-    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
-<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
-<p>一般会省略常数项，所以</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>的时间复杂度是O(1);</p>
-<p>所以在时间复杂度中 log的底数可以省略.</p>
-<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
-<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
-<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
-<p>sizeof是个假函数，在编译器就已经跑了.</p>
-</blockquote>
-<p>一个类型占用的空间和操作系统平台也息息相关。</p>
-<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
-<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
-</blockquote>
-<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
-<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
-<p>所以应该:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
-<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
-<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
-<p>那么a，b会被重复调用</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
-<p>那么输出会</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
-<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
-<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
-<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
-<blockquote>
-<p>This post was written on July 22, 2022 at 22:45</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI-Course</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>Course</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[模板]进制转换(10 to 2)</title>
     <url>/OI/OI%E6%A8%A1%E6%9D%BF/decToBin/</url>
     <content><![CDATA[<p>code:<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int decToBin(int dec)</span><br><span class="line">&#123;</span><br><span class="line">    int result = 0, temp = dec, j = 1;</span><br><span class="line">    while (temp)</span><br><span class="line">    &#123;</span><br><span class="line">        result += j * (temp % 2);</span><br><span class="line">        temp = temp / 2;</span><br><span class="line">        j = j * 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -162,6 +116,22 @@
         <tag>luogu</tag>
         <tag>OI</tag>
         <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo修改模板</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -206,6 +176,52 @@ O(n!)只能跑到10</script><blockquote>
 <p>定义used数组确保一个人只去了一次</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">15</span>;</span><br><span class="line"><span class="type">bool</span> used[MAXN];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == k+<span class="number">1</span>) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=k; i++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">if</span>(!used[i]) &#123;</span><br><span class="line">        a[pos] = i;<span class="comment">//使用</span></span><br><span class="line">        used[i] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">        <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">        used[i] = <span class="literal">false</span>;<span class="comment">//如果不标记回来，下一次枚举就不会枚举这个人</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>一般的枚举遵循先枚举、再检验的过程。但如果我们可以在枚举中途就发现某条<br>路不可行，直接不去走这条路，就能节省时间。<br>这便是剪枝，一个dfs能剪枝就减，不然可能会造成TLE（<del>Time Limit Enough</del>）</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Course-Day-1</title>
+    <url>/OI/OI-Course/course-day-1/</url>
+    <content><![CDATA[<p>今天是课程的第一天，众所周知上课不做笔记等于没上。</p>
+<h1 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h1><p>时间复杂度：算法需要跑的时间（单位是操作数）。</p>
+<p>一般会省略常数项，所以</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for(int i=1;i&lt;2^32-1;i++)&#123;</span><br><span class="line">	printf(&quot;%d\n&quot;,i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>的时间复杂度是O(1);</p>
+<p>所以在时间复杂度中 log的底数可以省略.</p>
+<h1 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h1><p> 粗略定义：整个程序占用了多大的内存。</p>
+<h2 id="各种变量类型占用的空间"><a href="#各种变量类型占用的空间" class="headerlink" title="各种变量类型占用的空间"></a>各种变量类型占用的空间</h2><h2 id="C-结构体占用空间（内存）"><a href="#C-结构体占用空间（内存）" class="headerlink" title="C 结构体占用空间（内存）"></a>C 结构体占用空间（内存）</h2><blockquote>
+<p><mark class="hl-label red">struct</mark>  的空间占用不要目测，要用 <mark class="hl-label red">siezeof</mark>  查看</p>
+<p>sizeof是个假函数，在编译器就已经跑了.</p>
+</blockquote>
+<p>一个类型占用的空间和操作系统平台也息息相关。</p>
+<h1 id="C-坑点"><a href="#C-坑点" class="headerlink" title="C++ 坑点"></a>C++ 坑点</h1><blockquote>
+<p>不要在局部变量开大数组（虽然我开数组从来开全局）</p>
+</blockquote>
+<h2 id="给大数组直接赋值"><a href="#给大数组直接赋值" class="headerlink" title="给大数组直接赋值"></a>给大数组直接赋值</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br></pre></td></tr></table></figure>
+<p>会直接给你的可执行文件中中写1e10个0，然而在CSP中你的代码不得超过512KB（和可执行文件没有关系），但是这样会编译超时。</p>
+<p>所以应该:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> a[<span class="number">1e10</span>+<span class="number">5</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">	a[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">2</span>;</span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">3</span>;</span><br><span class="line">	a[<span class="number">3</span>]=<span class="number">4</span>;</span><br><span class="line">	a[<span class="number">4</span>]=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Define"><a href="#Define" class="headerlink" title="Define"></a>Define</h2><p>define的本质是<mark class="hl-label red">字符串替换</mark> </p>
+<h3 id="不要使用define实现Max，Min等函数"><a href="#不要使用define实现Max，Min等函数" class="headerlink" title="不要使用define实现Max，Min等函数"></a>不要使用define实现Max，Min等函数</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MAX(a,b) a&gt;b?a:b</span></span><br></pre></td></tr></table></figure>
+<p>这样写看起来没有什么问题，但是如果a和b是函数呢？</p>
+<p>那么a，b会被重复调用</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">a</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;A\n&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">b</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;B\b&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">MAX</span>(<span class="built_in">a</span>(),<span class="built_in">b</span>());</span><br></pre></td></tr></table></figure>
+<p>那么输出会</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A</span><br><span class="line">B</span><br><span class="line">B</span><br></pre></td></tr></table></figure>
+<p>函数被<mark class="hl-label red">重复调用了</mark> ，所以不能用<mark class="hl-label blue">define</mark> 实现Max,Min等函数，而且使用define也提高不了<mark class="hl-label blue">效率</mark> 。</p>
+<h3 id="用define代替变量"><a href="#用define代替变量" class="headerlink" title="用define代替变量"></a>用define代替变量</h3><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> a 1+5</span></span><br><span class="line">cout&lt;&lt; a*<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>输出不会是<mark class="hl-label blue">12</mark> ,会是<mark class="hl-label red">11</mark> ,因为define是字符串替换。会替换成<mark class="hl-label pink">1+5*2=11</mark>  。</p>
+<blockquote>
+<p>This post was written on July 22, 2022 at 22:45</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -357,6 +373,20 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
+    <title>[模板]判断质数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI模板</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]hexo配置评论</title>
     <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
     <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
@@ -380,36 +410,6 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[折腾]hexo修改模板</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E4%BF%AE%E6%94%B9%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>hexo新建的文章不会自带标签和分类，所以就修改了hexo安装目录下的scaffolds中的post.md文件来解决.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags: [luogu,oi,刷题记]</span><br><span class="line">categories: </span><br><span class="line">  - oi</span><br><span class="line">  - 刷题记</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>因为我写的文章大部分都刷题记，所以就这样配置了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[模板]判断质数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isprime(int a)&#123;</span><br><span class="line">    for(int i = 2; i * i &lt;= a; i++)</span><br><span class="line">        if(a % i == 0)</span><br><span class="line">            return false;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>OI模板</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[模板]判断回文数</title>
     <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -421,30 +421,6 @@ O(n!)只能跑到10</script><blockquote>
       <tags>
         <tag>OI</tag>
         <tag>OI模板</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>vscode配置firacode字体</title>
-    <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
-    <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
-<p>但是最近发现code::blocks不是很舒服，cp editor不支持调试，gdb调试更麻烦，愉快的回到到vsc，只是配置字体有点“麻烦”而已。</p>
-<p>打开firacode github发行版页面: <a href="https://github.com/tonsky/FiraCode/releases/">firacode github发行版页面</a></p>
-<p>下载最新版安装即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220710211906247.png" alt="设置"></p>
-<p>打开设置，搜索font，点击字体，当然你直接展开“文本编辑器”选择字体也可以.</p>
-<p><img src="https://img.oier.xin/img/image-20220710212027931.png" alt="选择字体"></p>
-<p>填入Fira Code，一个字母都不能错！</p>
-<p><img src="https://img.oier.xin/img/image-20220710212206800.png" alt="image-20220710212206800"></p>
-<p>就配置完了，不需要重启vscode。</p>
-<blockquote>
-<p>This article was written on 2022/7/10</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>CS</category>
-      </categories>
-      <tags>
-        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -535,34 +511,27 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>[笔记]初赛笔记2021-8-20</title>
-    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
-    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
-<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
-<li>树：<ol>
-<li>N个节点，N-1条边</li>
-<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
-</ol>
-</li>
-<li>森林:树的集合<ol>
-<li>边的数量是顶点数-1</li>
-<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
-<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
-<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
-</ol>
-</li>
-<li>完全图有n(n-1)/2个节点</li>
-<li>用1维表示2平面，纵坐标*3+横坐标</li>
-<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
-</ol>
+    <title>vscode配置firacode字体</title>
+    <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
+    <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
+<p>但是最近发现code::blocks不是很舒服，cp editor不支持调试，gdb调试更麻烦，愉快的回到到vsc，只是配置字体有点“麻烦”而已。</p>
+<p>打开firacode github发行版页面: <a href="https://github.com/tonsky/FiraCode/releases/">firacode github发行版页面</a></p>
+<p>下载最新版安装即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220710211906247.png" alt="设置"></p>
+<p>打开设置，搜索font，点击字体，当然你直接展开“文本编辑器”选择字体也可以.</p>
+<p><img src="https://img.oier.xin/img/image-20220710212027931.png" alt="选择字体"></p>
+<p>填入Fira Code，一个字母都不能错！</p>
+<p><img src="https://img.oier.xin/img/image-20220710212206800.png" alt="image-20220710212206800"></p>
+<p>就配置完了，不需要重启vscode。</p>
+<blockquote>
+<p>This article was written on 2022/7/10</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>OI</category>
-        <category>笔记</category>
+        <category>CS</category>
       </categories>
       <tags>
-        <tag>OI</tag>
-        <tag>笔记</tag>
+        <tag>CS</tag>
       </tags>
   </entry>
   <entry>
@@ -599,19 +568,34 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
-    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
-    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
-<p>可现在后悔又有什么用呢？</p>
-<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
-<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
-<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
+    <title>[笔记]初赛笔记2021-8-20</title>
+    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
+    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
+<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
+<li>树：<ol>
+<li>N个节点，N-1条边</li>
+<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
+</ol>
+</li>
+<li>森林:树的集合<ol>
+<li>边的数量是顶点数-1</li>
+<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
+<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
+<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
+</ol>
+</li>
+<li>完全图有n(n-1)/2个节点</li>
+<li>用1维表示2平面，纵坐标*3+横坐标</li>
+<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
+</ol>
 ]]></content>
       <categories>
-        <category>自写</category>
+        <category>OI</category>
+        <category>笔记</category>
       </categories>
       <tags>
-        <tag>自写</tag>
+        <tag>OI</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -657,6 +641,22 @@ O(n!)只能跑到10</script><blockquote>
       </tags>
   </entry>
   <entry>
+    <title>我本可以忍受黑暗 如果我不曾见过光明</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%88%91%E6%9C%AC%E5%8F%AF%E4%BB%A5%E5%BF%8D%E5%8F%97%E9%BB%91%E6%9A%97-%E5%A6%82%E6%9E%9C%E6%88%91%E4%B8%8D%E6%9B%BE%E8%A7%81%E8%BF%87%E5%85%89%E6%98%8E/</url>
+    <content><![CDATA[<p>我笑了，笑得很凄凉，脸上写满了后知后觉的懊悔。虽说我有着后路，可“我本可以忍受黑暗，如果我从未见过光明”。我曾见过4年级的小学生讨论学术，我曾见过5年级的小学生轻轻松松学着我学了1个学期的知识，我是多么的希望和他们一样啊。于是，我有了梦想，但从未真正付出行动，多少个应该好好学习的日夜，我看着手中的书本发呆。我自以为可以依仗自己的那点小聪明来不听父母的教诲，抛去那比成功更重要的习惯与心态。我是多么的无知啊！若我可以依仗我那点小聪明便可以成功，那那么多莘莘学子的挑灯夜读又算什么呢？我失败的结果是注定的，因为我只看到了他们光彩的一面，没有看到他们将我如蜻蜓点水一般依靠小聪明学的知识学了一遍又一遍，我是多么的可笑啊！</p>
+<p>可现在后悔又有什么用呢？</p>
+<p>有用，我明白了“习惯心态和心性，决定一生去和从”,让我知道了“若无良之习，静之心，将一事无成！”这三岁小孩都明白的道理。</p>
+<p>我本可以忍受黑暗，如果我不曾见过光明。</p>
+<p>我不能忍受这黑暗，我要调整我的心态，平静我浮躁的心，养成良好的行为习惯，我不但要重见光明，我更要成为光明！</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[折腾]白嫖linuxone</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E7%99%BD%E5%AB%96linuxone/</url>
     <content><![CDATA[<p>偶然看到Linuxone可以白嫖，就愉快的去申请了个。<a href="https://linuxone.cloud.marist.edu/#/login">链接</a></p>
@@ -673,6 +673,19 @@ O(n!)只能跑到10</script><blockquote>
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
@@ -697,19 +710,6 @@ O(n!)只能跑到10</script><blockquote>
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
