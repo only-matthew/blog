@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-07-19T14:43:37.644Z</updated>
+  <updated>2022-07-21T05:05:42.710Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Courses-day-5-DP(动态规划)的初步学习</title>
+    <link href="https://blog.loveoi.net/OI/OI-Course/courses-day-5/"/>
+    <id>https://blog.loveoi.net/OI/OI-Course/courses-day-5/</id>
+    <published>2022-07-21T04:23:26.000Z</published>
+    <updated>2022-07-21T05:05:42.710Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Today is the fifth day of the course.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天可以开始学习普及组总最难的内容了！&lt;/p&gt;
+&lt;h1 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="OI-Course" scheme="https://blog.loveoi.net/categories/OI/OI-Course/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="Course" scheme="https://blog.loveoi.net/tags/Course/"/>
+    
+  </entry>
   
   <entry>
     <title>长知识了</title>
@@ -545,35 +580,6 @@
     <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/"/>
     <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isprime/</id>
     <published>2022-06-26T12:11:57.000Z</published>
-    <updated>2022-07-09T15:48:50.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[模板]判断回文数</title>
-    <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/"/>
-    <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</id>
-    <published>2022-06-26T12:10:45.000Z</published>
     <updated>2022-07-09T15:48:50.000Z</updated>
     
     
