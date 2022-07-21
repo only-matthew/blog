@@ -25,26 +25,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-B2136</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
-    <content><![CDATA[<p>收获了新模板:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>判断回文数。</p>
-<p>code:</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/26</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[刷题记]Luogu-B2140</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
     <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
@@ -69,9 +49,14 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-P6321</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
-    <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
+    <title>[刷题记]Luogu-B2136</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2136/</url>
+    <content><![CDATA[<p>收获了新模板:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>判断回文数。</p>
+<p>code:</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isprime</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i * i &lt;= a; i++)</span><br><span class="line">        <span class="keyword">if</span> (a % i == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isrever</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> tmp = n, NEW = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * <span class="number">10</span> + tmp % <span class="number">10</span>;</span><br><span class="line">        tmp /= <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> NEW == n;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> n, ans;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">11</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">isrever</span>(i) &amp;&amp; <span class="built_in">isprime</span>(i))</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/26</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -84,11 +69,9 @@
       </tags>
   </entry>
   <entry>
-    <title>[刷题记]Luogu-P8401</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
-    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/25</p>
+    <title>[刷题记]Luogu-P6321</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
+    <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -147,56 +130,20 @@
       </tags>
   </entry>
   <entry>
-    <title>Course-Day-2</title>
-    <url>/OI/OI-Course/course-day-2/</url>
-    <content><![CDATA[<blockquote>
-<p>Today is the second day of the course.</p>
-</blockquote>
-<h1 id="Note："><a href="#Note：" class="headerlink" title="Note："></a>Note：</h1><h2 id="什么是暴力方法"><a href="#什么是暴力方法" class="headerlink" title="什么是暴力方法"></a>什么是暴力方法</h2><blockquote>
-<p> 没有准确定义。一般指拿到问题之后，我们第一时间能想到的朴素方法。</p>
-<p>暴力算法一般复杂度较高，很多优秀算法是在朴素算法之上改进而来的。</p>
-</blockquote>
-<p>就直接硬写，写出来后再进行各种优化。</p>
-<h2 id="什么是模拟"><a href="#什么是模拟" class="headerlink" title="什么是模拟"></a>什么是模拟</h2><blockquote>
-<p>「模拟」，顾名思义，把出题人描述的场景用代码实现。<br>一般不需要我们的算法作决策。只需要模拟即可。</p>
-</blockquote>
-<p>模拟是一类题目的统称，有难有易,简单的有A+B problem，难的有猪国杀，一般考察代码能力。</p>
-<p>用代码把题目里的场景重现一遍。<br>可能有些模拟算法需要优化。</p>
-<blockquote>
-<p><a href="https://oi-wiki.org/basic/simulate/">模拟 - OI Wiki (oi-wiki.org)</a></p>
-</blockquote>
-<h2 id="基本枚举方法"><a href="#基本枚举方法" class="headerlink" title="基本枚举方法"></a>基本枚举方法</h2><blockquote>
-<p>所谓枚举，即不重不漏地列举出所有情况。<br>常用手段：循环、递归</p>
-</blockquote>
-<p>尝试每一种情况。当然，一些不可能的情况可以不去枚举，以此优化时间复杂度。</p>
-<p>现代cpu的运算速度一般达到了2000w/s，所以只要预估不超过2000w的运算，那么这个算法就是可行的。</p>
-<script type="math/tex; mode=display">
-O(n^{2})一般可以跑5000的数据</script><script type="math/tex; mode=display">
-O(n^{3})一般可以跑500的数据</script><script type="math/tex; mode=display">
-O(n!)只能跑到10</script><blockquote>
-<p>因为时间复杂度是预估的，实际可能更大或者更小</p>
-</blockquote>
-<h1 id="Learned："><a href="#Learned：" class="headerlink" title="Learned："></a>Learned：</h1><h2 id="递归枚举——深度优先搜索（Depth-first-search）"><a href="#递归枚举——深度优先搜索（Depth-first-search）" class="headerlink" title="递归枚举——深度优先搜索（Depth-first search）"></a>递归枚举——深度优先搜索（Depth-first search）</h2><h3 id="枚举子集"><a href="#枚举子集" class="headerlink" title="枚举子集"></a>枚举子集</h3><p>今有 n<em>n</em> 位同学，可以从中选出任意名同学参加合唱。</p>
-<p>对于每一个同学，我们都有去，或者不去2种选择，所以我们只需要枚举去或者不去即可</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == n+<span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">		<span class="comment">/*处理*/</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    a[pos] = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">    a[pos] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="枚举元组"><a href="#枚举元组" class="headerlink" title="枚举元组"></a>枚举元组</h3><blockquote>
-<p>给定 <em>n</em> 和 <em>k</em>，请按字典序输出全体 <em>n</em> 元组，其中元组内的元素是在 [1,<em>k</em>] 之间的整数。</p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == n+<span class="number">1</span>) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=k; i++) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        a[pos] = i;</span><br><span class="line">        <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="枚举排列"><a href="#枚举排列" class="headerlink" title="枚举排列"></a>枚举排列</h3><p>今有 <em>n</em> 名学生，要从中选出 <em>k</em> 人排成一列拍照。按照字典序输出排列。</p>
-<p>与枚举元组十分相似，很多枚举题都是从枚举元组和枚举子集魔改而来，这题也不例外。只需判断一个人是否出现2次即可。</p>
-<p>定义used数组确保一个人只去了一次</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">15</span>;</span><br><span class="line"><span class="type">bool</span> used[MAXN];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == k+<span class="number">1</span>) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=k; i++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">if</span>(!used[i]) &#123;</span><br><span class="line">        a[pos] = i;<span class="comment">//使用</span></span><br><span class="line">        used[i] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">        <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">        used[i] = <span class="literal">false</span>;<span class="comment">//如果不标记回来，下一次枚举就不会枚举这个人</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>一般的枚举遵循先枚举、再检验的过程。但如果我们可以在枚举中途就发现某条<br>路不可行，直接不去走这条路，就能节省时间。<br>这便是剪枝，一个dfs能剪枝就减，不然可能会造成TLE（<del>Time Limit Enough</del>）</p>
+    <title>[刷题记]Luogu-P8401</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
+    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/25</p>
 ]]></content>
       <categories>
         <category>OI</category>
-        <category>OI-Course</category>
+        <category>刷题记</category>
       </categories>
       <tags>
         <tag>luogu</tag>
         <tag>OI</tag>
-        <tag>Course</tag>
+        <tag>刷题记</tag>
       </tags>
   </entry>
   <entry>
@@ -258,9 +205,69 @@ f[x]=min(f[x-1],f[x/2])+1
 <script type="math/tex; mode=display">
 \begin{equation}
 
-    f[x]=\mathop{\max}_{p<x,a[p]<a[x]} {f[p]+1}
+    f[x]=\mathop{\max}_{p<x,a[p]<a[x]} \{ f[p]+1 \}
 
-\end{equation}</script>]]></content>
+\end{equation}</script><h2 id="总结：状态和转移"><a href="#总结：状态和转移" class="headerlink" title="总结：状态和转移"></a>总结：状态和转移</h2><p>一个dp题，应该经历2个过程：</p>
+<ol>
+<li>设计状态。把面临的每一个问题，表达成一个个「状态」。</li>
+<li>设计转移。写出状态转移方程，从而利用小问题的解推出大问题的解。</li>
+</ol>
+<p>可以通俗的说：大事化小，小事化了</p>
+<p>dp的递推形式可以从过去推到现在，也可以从现在推到未来，时间复杂度和空间都是一样的，只是写法不同罢了，就像dp可以用递推实现也可以用记忆化搜索实现。</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>OI-Course</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>Course</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Course-Day-2</title>
+    <url>/OI/OI-Course/course-day-2/</url>
+    <content><![CDATA[<blockquote>
+<p>Today is the second day of the course.</p>
+</blockquote>
+<h1 id="Note："><a href="#Note：" class="headerlink" title="Note："></a>Note：</h1><h2 id="什么是暴力方法"><a href="#什么是暴力方法" class="headerlink" title="什么是暴力方法"></a>什么是暴力方法</h2><blockquote>
+<p> 没有准确定义。一般指拿到问题之后，我们第一时间能想到的朴素方法。</p>
+<p>暴力算法一般复杂度较高，很多优秀算法是在朴素算法之上改进而来的。</p>
+</blockquote>
+<p>就直接硬写，写出来后再进行各种优化。</p>
+<h2 id="什么是模拟"><a href="#什么是模拟" class="headerlink" title="什么是模拟"></a>什么是模拟</h2><blockquote>
+<p>「模拟」，顾名思义，把出题人描述的场景用代码实现。<br>一般不需要我们的算法作决策。只需要模拟即可。</p>
+</blockquote>
+<p>模拟是一类题目的统称，有难有易,简单的有A+B problem，难的有猪国杀，一般考察代码能力。</p>
+<p>用代码把题目里的场景重现一遍。<br>可能有些模拟算法需要优化。</p>
+<blockquote>
+<p><a href="https://oi-wiki.org/basic/simulate/">模拟 - OI Wiki (oi-wiki.org)</a></p>
+</blockquote>
+<h2 id="基本枚举方法"><a href="#基本枚举方法" class="headerlink" title="基本枚举方法"></a>基本枚举方法</h2><blockquote>
+<p>所谓枚举，即不重不漏地列举出所有情况。<br>常用手段：循环、递归</p>
+</blockquote>
+<p>尝试每一种情况。当然，一些不可能的情况可以不去枚举，以此优化时间复杂度。</p>
+<p>现代cpu的运算速度一般达到了2000w/s，所以只要预估不超过2000w的运算，那么这个算法就是可行的。</p>
+<script type="math/tex; mode=display">
+O(n^{2})一般可以跑5000的数据</script><script type="math/tex; mode=display">
+O(n^{3})一般可以跑500的数据</script><script type="math/tex; mode=display">
+O(n!)只能跑到10</script><blockquote>
+<p>因为时间复杂度是预估的，实际可能更大或者更小</p>
+</blockquote>
+<h1 id="Learned："><a href="#Learned：" class="headerlink" title="Learned："></a>Learned：</h1><h2 id="递归枚举——深度优先搜索（Depth-first-search）"><a href="#递归枚举——深度优先搜索（Depth-first-search）" class="headerlink" title="递归枚举——深度优先搜索（Depth-first search）"></a>递归枚举——深度优先搜索（Depth-first search）</h2><h3 id="枚举子集"><a href="#枚举子集" class="headerlink" title="枚举子集"></a>枚举子集</h3><p>今有 n<em>n</em> 位同学，可以从中选出任意名同学参加合唱。</p>
+<p>对于每一个同学，我们都有去，或者不去2种选择，所以我们只需要枚举去或者不去即可</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == n+<span class="number">1</span>) </span><br><span class="line">    &#123;</span><br><span class="line">		<span class="comment">/*处理*/</span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    a[pos] = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">    a[pos] = <span class="number">1</span>;</span><br><span class="line">    <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举元组"><a href="#枚举元组" class="headerlink" title="枚举元组"></a>枚举元组</h3><blockquote>
+<p>给定 <em>n</em> 和 <em>k</em>，请按字典序输出全体 <em>n</em> 元组，其中元组内的元素是在 [1,<em>k</em>] 之间的整数。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == n+<span class="number">1</span>) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=k; i++) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        a[pos] = i;</span><br><span class="line">        <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举排列"><a href="#枚举排列" class="headerlink" title="枚举排列"></a>枚举排列</h3><p>今有 <em>n</em> 名学生，要从中选出 <em>k</em> 人排成一列拍照。按照字典序输出排列。</p>
+<p>与枚举元组十分相似，很多枚举题都是从枚举元组和枚举子集魔改而来，这题也不例外。只需判断一个人是否出现2次即可。</p>
+<p>定义used数组确保一个人只去了一次</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">15</span>;</span><br><span class="line"><span class="type">bool</span> used[MAXN];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pos == k+<span class="number">1</span>) &#123;<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=k; i++)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>; i&lt;=n; i++)<span class="comment">//边界条件与输出</span></span><br><span class="line">        <span class="keyword">if</span>(!used[i]) &#123;</span><br><span class="line">        a[pos] = i;<span class="comment">//使用</span></span><br><span class="line">        used[i] = <span class="literal">true</span>;<span class="comment">//标记</span></span><br><span class="line">        <span class="built_in">dfs</span>(pos + <span class="number">1</span>);</span><br><span class="line">        used[i] = <span class="literal">false</span>;<span class="comment">//如果不标记回来，下一次枚举就不会枚举这个人</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>一般的枚举遵循先枚举、再检验的过程。但如果我们可以在枚举中途就发现某条<br>路不可行，直接不去走这条路，就能节省时间。<br>这便是剪枝，一个dfs能剪枝就减，不然可能会造成TLE（<del>Time Limit Enough</del>）</p>
+]]></content>
       <categories>
         <category>OI</category>
         <category>OI-Course</category>
@@ -482,9 +489,12 @@ f[x]=min(f[x-1],f[x/2])+1
       </tags>
   </entry>
   <entry>
-    <title>[模板]判断回文数</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[模板]快读&amp;快写</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
+    <content><![CDATA[<p>快读：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>快写：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -496,12 +506,9 @@ f[x]=min(f[x-1],f[x/2])+1
       </tags>
   </entry>
   <entry>
-    <title>[模板]快读&amp;快写</title>
-    <url>/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</url>
-    <content><![CDATA[<p>快读：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">read</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x = <span class="number">0</span>, f = <span class="number">1</span>;</span><br><span class="line">    <span class="type">char</span> c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">while</span> (c &lt; <span class="string">&#x27;0&#x27;</span> || c &gt; <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (c == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            f = <span class="number">-1</span>;</span><br><span class="line">        c = <span class="built_in">getchar</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">        x = x * <span class="number">10</span> + c - <span class="string">&#x27;0&#x27;</span>, c = <span class="built_in">getchar</span>();</span><br><span class="line">    <span class="keyword">return</span> x * f;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>快写：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &lt; <span class="number">0</span>)</span><br><span class="line">        <span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>), x = -x;</span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">9</span>)</span><br><span class="line">        <span class="built_in">write</span>(x / <span class="number">10</span>);</span><br><span class="line">    <span class="built_in">putchar</span>(x % <span class="number">10</span> + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>[模板]判断回文数</title>
+    <url>/OI/OI%E6%A8%A1%E6%9D%BF/isrever/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool isrever(int n)</span><br><span class="line">&#123;</span><br><span class="line">    int tmp = n, NEW = 0;</span><br><span class="line">    while (tmp)</span><br><span class="line">    &#123;</span><br><span class="line">        NEW = NEW * 10 + tmp % 10;</span><br><span class="line">        tmp /= 10;</span><br><span class="line">    &#125;</span><br><span class="line">    return NEW == n;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -583,37 +590,6 @@ f[x]=min(f[x-1],f[x/2])+1
       </tags>
   </entry>
   <entry>
-    <title>[笔记]初赛笔记2021-8-20</title>
-    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
-    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
-<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
-<li>树：<ol>
-<li>N个节点，N-1条边</li>
-<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
-</ol>
-</li>
-<li>森林:树的集合<ol>
-<li>边的数量是顶点数-1</li>
-<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
-<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
-<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
-</ol>
-</li>
-<li>完全图有n(n-1)/2个节点</li>
-<li>用1维表示2平面，纵坐标*3+横坐标</li>
-<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
-</ol>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>OI</tag>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vscode配置firacode字体</title>
     <url>/CS/vscode%E9%85%8D%E7%BD%AEfiracode%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>之前一直不知道怎么在vsc配置firacode导致一直在用别的ide。是的，就是我们的CP Editor和code::blocks。</p>
@@ -653,6 +629,37 @@ f[x]=min(f[x-1],f[x/2])+1
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[笔记]初赛笔记2021-8-20</title>
+    <url>/OI/%E7%AC%94%E8%AE%B0/%E5%88%9D%E8%B5%9B%E7%AC%94%E8%AE%B02021-8-20/</url>
+    <content><![CDATA[<h1 id="笔记2021-8-20"><a href="#笔记2021-8-20" class="headerlink" title="笔记2021-8-20"></a>笔记2021-8-20</h1><ol>
+<li>线性表无需事先预估存储空间，不可以随机访问元素插入和删除不需要移动，只需改变关系！</li>
+<li>树：<ol>
+<li>N个节点，N-1条边</li>
+<li>可能有一个根节点，层次所有节点之间都可以相互连通，没有环</li>
+</ol>
+</li>
+<li>森林:树的集合<ol>
+<li>边的数量是顶点数-1</li>
+<li>前序遍历:首先访问根结点,然后遍历左子树，最后遍历右子树。（根，左，右）</li>
+<li>中序遍历:首先遍历左子树,然后访问根结点,最后遍历右子树。（左，根，右）</li>
+<li>后序遍历:首先遍历左子树,然后遍历右子树,最后访问根结点。（左，右，根）</li>
+</ol>
+</li>
+<li>完全图有n(n-1)/2个节点</li>
+<li>用1维表示2平面，纵坐标*3+横坐标</li>
+<li>对于每一位都有0&amp;0=0&amp;1=1&amp;0=0和1&amp;1= 1</li>
+</ol>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>OI</tag>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -748,19 +755,6 @@ f[x]=min(f[x-1],f[x/2])+1
       </tags>
   </entry>
   <entry>
-    <title>自重之果当自食</title>
-    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
-    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
-<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]给blog压缩字体</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E7%BB%99blog%E5%8E%8B%E7%BC%A9%E5%AD%97%E4%BD%93/</url>
     <content><![CDATA[<p>因为最近发现blog有亿点慢，就去控制台分析了一下，发现在加载自定义字体时候花费了很多时间：</p>
@@ -782,6 +776,19 @@ f[x]=min(f[x-1],f[x/2])+1
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自重之果当自食</title>
+    <url>/%E8%87%AA%E5%86%99/%E8%87%AA%E9%87%8D%E4%B9%8B%E6%9E%9C%E5%BD%93%E8%87%AA%E9%A3%9F/</url>
+    <content><![CDATA[<mark class="hl-label red">自种之果当自食</mark> 
+<p>昔日不听母<mark class="hl-label red">良言</mark> ，今日终食<mark class="hl-label red">昔日果</mark> 。<br>父母之诲何其重，为何不听此<mark class="hl-label red">箴言</mark> 。<br>倘若不生此<mark class="hl-label red">突变</mark> ，只怕数年难<mark class="hl-label blue">领会</mark> 。<br>自种之果当<mark class="hl-label red">自食</mark> ，吾当自此明<mark class="hl-label red">此理</mark> 。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
