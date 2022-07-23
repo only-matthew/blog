@@ -45,6 +45,23 @@
       </tags>
   </entry>
   <entry>
+    <title>[刷题记]Luogu-P8401</title>
+    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
+    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2022/6/25</p>
+]]></content>
+      <categories>
+        <category>OI</category>
+        <category>刷题记</category>
+      </categories>
+      <tags>
+        <tag>luogu</tag>
+        <tag>OI</tag>
+        <tag>刷题记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[刷题记]Luogu-B2140</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-B2140/</url>
     <content><![CDATA[<p>遇到了一个有意思的题目，有意思的点不在于题目本身，在于它的10进制转2进制。</p>
@@ -72,23 +89,6 @@
     <title>[刷题记]Luogu-P6321</title>
     <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P6321/</url>
     <content><![CDATA[<p>中考终于考完了！又可以做题了！<br>在1年没做题后发现自己啥也不会了，只能从红题开始重刷（哭笑）。<br><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">50</span> + <span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> r, c, zr, zc;</span><br><span class="line"><span class="type">char</span> ch[MAXN][MAXN];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d %d %d %d&quot;</span>, &amp;r, &amp;c, &amp;zr, &amp;zc);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            std::cin &gt;&gt; ch[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; r; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">0</span>; k &lt; zr; k++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; c; j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> l = <span class="number">0</span>; l &lt; zc; l++)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, ch[i][j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>这道题也是有点意思，我第一时间想到的居然是各种数据结构，然后发现自己啥也不会写了（数据结构学了和没学似的）。<br>应该是按照行和列输出，把行扩大（i行套zr），在每行里嵌套l列，即可实现“矩阵”输出。<br>2022/6/22</p>
-]]></content>
-      <categories>
-        <category>OI</category>
-        <category>刷题记</category>
-      </categories>
-      <tags>
-        <tag>luogu</tag>
-        <tag>OI</tag>
-        <tag>刷题记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[刷题记]Luogu-P8401</title>
-    <url>/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/Luogu-P8401/</url>
-    <content><![CDATA[<p>随机跳题到了一道红题，记录一下。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="type">int</span> n, a, b, ans, cnt;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    cnt = n;</span><br><span class="line">    <span class="keyword">while</span> (n--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d %d&quot;</span>, &amp;a, &amp;b);</span><br><span class="line">        <span class="keyword">if</span> ((<span class="number">5</span> * a - <span class="number">3</span> * b) &gt; <span class="number">40</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            ans++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, ans);</span><br><span class="line">    <span class="keyword">if</span> (ans == cnt)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;+&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2022/6/25</p>
 ]]></content>
       <categories>
         <category>OI</category>
@@ -379,48 +379,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]hexo折腾waline评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
-<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
-<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
-<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
-<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
-<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
-<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
-<p>2022/6/29</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo设置自定义字体粗细</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
-    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
-<p>如果不想弄可以直接改body</p>
-<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
-<blockquote>
-<p>This article was written on July 11, 2022.</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>折腾</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]Hexo折腾之旅-Hexo安装与美化，这一篇文章就够了！（差不多）</title>
     <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BE%E4%B9%8B%E6%97%85/</url>
     <content><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在试过WordPress和Typeho后，感觉好用是好用（可以在线写文章），可惜速度慢了点，一测速全国都是1.5s~4s,于是打算折腾Hexo。</p>
@@ -518,18 +476,37 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>[折腾]hexo配置评论</title>
-    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
-    <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
-<p><img src="https://img.oier.xin/img/image-20220629124822884.png" alt="参考Waline官方说明"></p>
-<p>因为waline是基于valine，所以他的文档我也看了一下，虽然说是需要接入，但是我在配置后没有接入依然可以使用。</p>
-<p>打开<a href="https://www.leancloud.cn/">LeanCloud</a>,注册登录实名跟着来就行了，只需要获取key</p>
-<p><img src="https://img.oier.xin/img/image-20220629124042608.png" alt="key页面"></p>
-<p><img src="https://img.oier.xin/img/image-20220629124135322.png" alt="添加域名"></p>
-<p>即可完成配置，再去butterfly配置文件配置一下</p>
-<p><img src="https://img.oier.xin/img/image-20220629124217149.png" alt="配置文件"></p>
-<p>官方文档:<a href="https://butterfly.js.org/posts/ceeb73f/#評論">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a></p>
+    <title>[折腾]hexo折腾waline评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E6%8A%98%E8%85%BEwaline%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>按照之前的文章（hexo配置评论），是折腾的valine，但是没有后端，改评论需要去leancloud修改。</p>
+<p>waline：<a href="https://waline.js.org/guide/get-started.html">waline官网</a> 按照官方文档</p>
+<p>当然是国内的最好了，一开始以为只能Vercel 部署，后来发现可以阿里云函数部署<a href="https://waline.js.org/guide/server/aliyun-fc.html/">官方文档</a></p>
+<p>但是官方文档似乎不太靠谱，只需要去github下载<a href="https://github.com/walinejs/aliyun-fc-starter/">github</a>然后去阿里云函数上传zip压缩包即可。</p>
+<p><img src="https://img.oier.xin/img/image-20220629191827608.png" alt="注意需要把外层的文件夹，不然无法调用"></p>
+<p>注意需要把外层的文件夹中的文件移到根目录，不然无法调用！</p>
+<p><img src="https://img.oier.xin/img/image-20220629192000699.png" alt="有一层文件夹"></p>
 <p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo设置自定义字体粗细</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%E7%B2%97%E7%BB%86/</url>
+    <content><![CDATA[<p>用F12搞了2天终于配置好了自定义字体，这时候就有人要问了，为什么不直接在Butterfly 里设置字体呢？那是因为我设置font-family后找不到我的font-family。只能用 !important 提高优先级来替换字体了。可以参考我的font.css</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:<span class="string">&#x27;arzhu&#x27;</span>;</span><br><span class="line">    <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">&#x27;/fonts/FZQiGXKJW.woff2&#x27;</span>); <span class="comment">/* 修改成你的字体 */</span></span><br><span class="line">    <span class="attribute">font-display</span>:swap</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: firacode;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/firacoder.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;/fonts/yuanhua.woff2&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-id">#site-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.post-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-id">#subtitle</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-id">#site-name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-class">.title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.item-headline</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.author-info__name</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#menus</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#page</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#tag</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#archive</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.recent-post-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.content</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bolder;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.prev_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.next_info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#footer-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-id">#post-meta</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span><span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.pagination</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:arzhu<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-info</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.aside-list-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-widget</span><span class="selector-class">.card-categories</span> &#123; <span class="comment">/*侧边栏分类*/</span></span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.card-tag-cloud</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.search-dialog</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">span</span><span class="selector-class">.line</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:firacode<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ul</span><span class="selector-class">.card-archive-list</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>:fzfonts<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果不知道对应的是什么可以直接去开发者工具（F12）搜。</p>
+<p>如果不想弄可以直接改body</p>
+<p>有很多这种包含几乎所有页面的标签，这个时候直接在css里覆盖字体就好了，即可全局改字体，但是因为我用了2中字体，只能挨个改了。</p>
+<blockquote>
+<p>This article was written on July 11, 2022.</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>折腾</category>
@@ -552,6 +529,29 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>OI</tag>
         <tag>OI模板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[折腾]hexo配置评论</title>
+    <url>/%E6%8A%98%E8%85%BE/Web/hexo%E9%85%8D%E7%BD%AE%E8%AF%84%E8%AE%BA/</url>
+    <content><![CDATA[<p>之前一直用的来必力(livere)，但是发现速度有时不太理想，于是打算换成valine，这是就有人要问了：嗯？valine有时不是比来必力还慢吗？那得看你用的LeanCloud是什么了，我用的是LeanCloud.cn，备案了就是可以为所欲为（似乎需要接入）。</p>
+<p><img src="https://img.oier.xin/img/image-20220629124822884.png" alt="参考Waline官方说明"></p>
+<p>因为waline是基于valine，所以他的文档我也看了一下，虽然说是需要接入，但是我在配置后没有接入依然可以使用。</p>
+<p>打开<a href="https://www.leancloud.cn/">LeanCloud</a>,注册登录实名跟着来就行了，只需要获取key</p>
+<p><img src="https://img.oier.xin/img/image-20220629124042608.png" alt="key页面"></p>
+<p><img src="https://img.oier.xin/img/image-20220629124135322.png" alt="添加域名"></p>
+<p>即可完成配置，再去butterfly配置文件配置一下</p>
+<p><img src="https://img.oier.xin/img/image-20220629124217149.png" alt="配置文件"></p>
+<p>官方文档:<a href="https://butterfly.js.org/posts/ceeb73f/#評論">Butterfly 安裝文檔(四) 主題配置-2 | Butterfly</a></p>
+<p>2022/6/29</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -625,6 +625,33 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </categories>
       <tags>
         <tag>CS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>wsl安装ohmyposh-ubuntu</title>
+    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
+    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
+<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
+<p>然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
+<p>安装主题.</p>
+<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
+<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
+<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
+<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
+<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>你的目录中可能会是这些文件中的一个。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
+<p>在文件中加入即可。</p>
+<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
+]]></content>
+      <categories>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
       </tags>
   </entry>
   <entry>
@@ -747,33 +774,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>wsl安装ohmyposh-ubuntu</title>
-    <url>/%E6%8A%98%E8%85%BE/wsl%E5%AE%89%E8%A3%85ohmyposh-ubuntu/</url>
-    <content><![CDATA[<p>发现在wls中无法使用ohmyposh的主题，于是打算安装官网的linux教程配置，但是发现国内用homedrew和下载有亿点慢。所以使用了官网的手动安装教程：<a href="https://ohmyposh.dev/docs/installation/linux">Linux | Oh My Posh</a></p>
-<h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><p>把手动安装脚本改成：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo wget https://download.fastgit.org/JanDeDobbeleer/oh-my-posh/releases/download/v8.22.1/posh-linux-amd64 -O /usr/local/bin/oh-my-posh</span><br><span class="line">sudo <span class="built_in">chmod</span> +x /usr/local/bin/oh-my-posh</span><br></pre></td></tr></table></figure>
-<p>然后执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/.poshthemes</span><br><span class="line">wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip</span><br><span class="line">unzip ~/.poshthemes/themes.zip -d ~/.poshthemes</span><br><span class="line"><span class="built_in">chmod</span> u+rw ~/.poshthemes/*.omp.*</span><br><span class="line"><span class="built_in">rm</span> ~/.poshthemes/themes.zip</span><br></pre></td></tr></table></figure>
-<p>安装主题.</p>
-<h1 id="启用"><a href="#启用" class="headerlink" title="启用"></a>启用</h1><p><a href="https://ohmyposh.dev/docs/installation/customize">Customize | Oh My Posh</a></p>
-<p>官方教程说输入那个命令即可启用，启用了是启用了，但是没法打开bash就启用啊。</p>
-<p>安装了之后怎么启用呢？powershell可以配置启动脚本，bash怎么办？</p>
-<p>找了好久发现需要在用户目录下的bash配置中加入命令。</p>
-<p><a href="https://ohmyposh.dev/docs/installation/prompt">Change your prompt | Oh My Posh</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">~/.bashrc``~/.profile``~/.bash_profile</span><br></pre></td></tr></table></figure>
-<p>你的目录中可能会是这些文件中的一个。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(oh-my-posh init bash --config 主题目录)</span>&quot;</span></span><br></pre></td></tr></table></figure>
-<p>在文件中加入即可。</p>
-<p>就可以愉快的使用了ohmyposh美化过的终端了。</p>
-]]></content>
-      <categories>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>幡然醒悟</title>
     <url>/%E8%87%AA%E5%86%99/%E5%B9%A1%E7%84%B6%E9%86%92%E6%82%9F/</url>
     <content><![CDATA[<h1 id="幡然醒悟"><a href="#幡然醒悟" class="headerlink" title="幡然醒悟"></a>幡然醒悟</h1><p>余自幼便自豪于家中亲戚大抵为师。家父，家母，一数学，一语文，此乃二基础科。每逢其教诲，余曰：“家父、家母皆教于高中，余读于小学、初中，余为何从之？”故余不听其教诲，教诲如过耳之风，余从未放于心。而今，余幡然醒悟:“父母教诲何其重，为何不听此箴言？”良之习，静之心，韧之性，此乃成功之基本。余不听父母之<mark class="hl-label blue">教诲</mark> ，其因并非其教于高中，只因余之懒惰，余心之浮躁，余自幼之陋习。若无良之习，静之心，韧之性，将一事无成！</p>
@@ -840,26 +840,6 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       </tags>
   </entry>
   <entry>
-    <title>挥之不去的身影</title>
-    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
-    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
-<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索的为什么是空的，不远处的谈话声</p>
-<p>打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
-<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
-<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终身难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
-<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。<br>我甩了甩头，丢弃这些杂念，开始做题。</p>
-<p>那一场考试的结果是注定的――分数甚至低于瞎蒙。</p>
-<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
-<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
-]]></content>
-      <categories>
-        <category>自写</category>
-      </categories>
-      <tags>
-        <tag>自写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[折腾]折腾twikoo</title>
     <url>/%E6%8A%98%E8%85%BE/Web/%E6%8A%98%E8%85%BEtwikoo/</url>
     <content><![CDATA[<p>虽然我已经配置好了valine和waline，但是折腾嘛，就是为了折腾，就去折腾了一下twikoo.</p>
@@ -879,6 +859,26 @@ f[x]=f[x/2]+1 & \{x|x=2n, n∈Z\}
       <tags>
         <tag>折腾</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>挥之不去的身影</title>
+    <url>/%E8%87%AA%E5%86%99/%E6%8C%A5%E4%B9%8B%E4%B8%8D%E5%8E%BB%E7%9A%84%E8%BA%AB%E5%BD%B1/</url>
+    <content><![CDATA[<p>依稀记得，2020的11月，那是我第一次参加csp，也是2场都参加，试卷是什么样，中间尽力的那些波折？早已记不清了。唯有那个身影，那个眼神，在我的脑海里挥之不去，犹如昨日一般。</p>
+<p>进入考场，找到位置，那时还是个懵懂少年的我四处张望，在离我的不远处，有一个位置，是空的。我正思索的为什么是空的，不远处的谈话声</p>
+<p>打断了我的思绪：“老师，个人报名的坐哪里？”监考老师指了指那个空位，一个身高180，比我稍大的男孩走向了那个位置。</p>
+<p>在看到他的背影的瞬间，我心中的某个地方似乎被触动了，感到无尽的萧瑟与沧桑。仿佛他不是一个比我稍大的男孩，是一个尝尽天下疾苦的老人，是一个经历无数大起大落但仍不放弃的奋斗者。</p>
+<p>他坐下了，从身后的背包中找出身份证递给监考老师，老师验完后他收起身份证的那个眼神让我终身难忘。那是一个怎样的眼神？有着对未来的迷茫与期望，同时也有着坚定与执着。</p>
+<p>我十分好奇这样的眼神与背影为何会出现在一个比我稍大的男孩身上，以及为什么我能看的如此透彻。<br>我甩了甩头，丢弃这些杂念，开始做题。</p>
+<p>那一场考试的结果是注定的――分数甚至低于瞎蒙。</p>
+<p>2年没有学习的我自然不会得到好结果。可惜当时的我过于懵懂无知，没有真正明白努力与收获的关系，直至今日我才真正明白这个三岁小孩都是明白的道理。</p>
+<p>2021的csp出发前，我照了照镜子，与记忆中的那个身影是如此的相似，一瞬间我明白了为何我能看懂他的眼神。因为，他就是现在的我啊。</p>
+]]></content>
+      <categories>
+        <category>自写</category>
+      </categories>
+      <tags>
+        <tag>自写</tag>
       </tags>
   </entry>
   <entry>
