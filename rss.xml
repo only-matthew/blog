@@ -6,7 +6,7 @@
   <link href="https://blog.loveoi.net/rss.xml" rel="self"/>
   
   <link href="https://blog.loveoi.net/"/>
-  <updated>2022-07-21T13:20:50.391Z</updated>
+  <updated>2022-07-23T06:55:32.613Z</updated>
   <id>https://blog.loveoi.net/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>折腾ohmyposh</title>
+    <link href="https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/%E6%8A%98%E8%85%BEohmyposh/"/>
+    <id>https://blog.loveoi.net/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/%E6%8A%98%E8%85%BEohmyposh/</id>
+    <published>2022-07-23T06:55:32.000Z</published>
+    <updated>2022-07-23T06:55:32.613Z</updated>
+    
+    
+    
+    
+    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/categories/OI/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+    
+    <category term="luogu" scheme="https://blog.loveoi.net/tags/luogu/"/>
+    
+    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
+    
+    <category term="刷题记" scheme="https://blog.loveoi.net/tags/%E5%88%B7%E9%A2%98%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo-sakura</title>
@@ -571,36 +594,6 @@
     <category term="折腾" scheme="https://blog.loveoi.net/tags/%E6%8A%98%E8%85%BE/"/>
     
     <category term="Web" scheme="https://blog.loveoi.net/tags/Web/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[模板]快读&amp;快写</title>
-    <link href="https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/"/>
-    <id>https://blog.loveoi.net/OI/OI%E6%A8%A1%E6%9D%BF/quick-read&amp;quick-out/</id>
-    <published>2022-06-26T12:14:10.000Z</published>
-    <updated>2022-07-09T15:48:50.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;快读：&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/categories/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/categories/OI/OI%E6%A8%A1%E6%9D%BF/"/>
-    
-    
-    <category term="OI" scheme="https://blog.loveoi.net/tags/OI/"/>
-    
-    <category term="OI模板" scheme="https://blog.loveoi.net/tags/OI%E6%A8%A1%E6%9D%BF/"/>
     
   </entry>
   
