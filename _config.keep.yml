@@ -318,11 +318,11 @@ footer:
 
   site_deploy:
     enable: true        # Option values: true | false
-    provider: aliyun     # Option values: github | vercel | netlify | cloudflare | gitee | aliyun | tencent_cloud | upyun
+    provider: vercel     # Option values: github | vercel | netlify | cloudflare | gitee | aliyun | tencent_cloud | upyun
     url:                 # Your deployment provider url, Can be null
 
   record:
-    enable: true        # Option values: true | false
+    enable: false        # Option values: true | false
     list:
     - code: aaaa
       link: https://beian.miit.gov.cn
