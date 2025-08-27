@@ -1,6 +1,7 @@
 ---
 title: 泰勒公式学习笔记
 date: 2025-08-26 17:30:21
+categories: Mathematics
 tags: Mathematics
 mathjax: true
 ---
