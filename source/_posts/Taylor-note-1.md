@@ -46,7 +46,7 @@ $$
 
 ## $eg_2$
 
-求极限$$\lim_{x \to +\infty}\left\{\frac{e}{2}x+x^2[(1+\frac{1}{x})^x-e ]\right\}$$
+求极限$\lim_{x \to +\infty}\left\{\frac{e}{2}x+x^2[(1+\frac{1}{x})^x-e ]\right\}$
 
 从内层到外层慢慢地展开，先处理$(1+\frac{1}{x})^x$
 

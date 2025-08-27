@@ -12,8 +12,8 @@
     "version": "7.3.0"
   },
   "dependencies": {
+    "@traptitech/markdown-it-katex": "^3.6.0",
     "hexo": "^7.3.0",
-    "hexo-filter-mathjax": "^0.9.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",
@@ -21,10 +21,11 @@
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-dartsass": "^1.1.0",
     "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-markdown-it": "^7.1.1",
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
+    "hexo-theme-fluid": "^1.9.8",
     "hexo-theme-keep": "^4.2.5",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1"
